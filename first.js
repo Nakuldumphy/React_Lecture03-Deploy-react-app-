@@ -49,7 +49,7 @@ const Reactroot = ReactDOM.createRoot(document.getElementById('root'));
 
 // Reactroot.render(div);
 
-
+// ###################################
 // JavaScript xml // not part of react
 // ***** JSX ***** //html jaisa code direct JS me likh skte ho 
 const newElement = <h1>hello coder army</h1> //ye JSX ka part hai, react nhi hai  // abb hmm react.createElement ko use nhi krenge
@@ -62,4 +62,27 @@ Reactroot.render(newElement); // agrr show na kre tho previous cache ko delete k
 // parcel me already present hota hai // you can see it from node_module
 // working:
 // JSX code => react.createElement(by babel) => it will return react element(or JS Object) => render krrte time vo HTML ke element me convert hojae ga
-// therefore, babel ek transpiler hai // same typescript me jo hmmne dhekha tha
+// therefore, babel ek transpiler hai // same typescript me jo hmmne transpiler dhekha tha
+
+// multiple elements ko kaise daalna hai
+// const element = (   //ye bracket ke bina bhi chal jae ga // backet se code readable bannta hai
+// <div>
+// <h1>hello coder army</h1> 
+// <h2>Maja aaya mujhe</h2>
+// </div>
+// );
+// Reactroot.render(newElement);
+// prr issme ek 'div' extra aari hai
+// use empty element
+
+const element = (  
+    <>
+    <h1 id="first" className="second">hello coder army</h1> 
+    <h2>Maja aaya mujhe</h2>
+    </>
+    );
+    Reactroot.render(element);
+
+
+// difference b/w jsx and html
+// jsx me className use krna hoga , html me class use krna hoga
